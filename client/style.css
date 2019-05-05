@@ -1,0 +1,12 @@
+#halaman-utama{
+    padding: 80px;
+    border-radius: 20px;
+}
+
+.complete {
+    background-color: aqua
+}
+
+.pending {
+    background-color: brown
+}
