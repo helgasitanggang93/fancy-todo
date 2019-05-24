@@ -1,11 +1,11 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const todosRoutes = require('./routes')
 const cors = require('cors')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/fancy-todo', { useNewUrlParser: true })
+mongoose.connect(`${process.env.MONGO_DB}-todo`, { useNewUrlParser: true })
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors())
